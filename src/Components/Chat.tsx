@@ -11,7 +11,7 @@ import ChatMessages from './ChatMessages';
 
 const Chat: FC = ({}) => {
   return (
-    <div >
+    <div>
       <Accordion sx={{
         position: 'fixed',
         right: '32px',
@@ -26,6 +26,7 @@ const Chat: FC = ({}) => {
             }}/>}
           aria-controls="panel1a-content"
           id="panel1a-header"
+          
         >
           <ChatHeader/>
         </AccordionSummary>
@@ -35,9 +36,9 @@ const Chat: FC = ({}) => {
           borderRadius: 4,
           overflow: 'hidden'
         }}>
-          <div className='flex flex-col h-80'>
-            <ChatMessages className='px-2 py-2 flex-1'/>
-            <ChatInput className='px-4'/>
+          <div className='flex flex-col h-80 '>
+            <ChatMessages className='px-1 py-2 flex-1'/>
+            <ChatInput className='px-3'/>
           </div>
         </AccordionDetails>
       </Accordion>

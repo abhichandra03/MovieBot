@@ -80,7 +80,7 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
         },
     })
   return (
-    <div {...props} className={cn("border-t border-zinc-300", className)}>
+    <div {...props} className={cn("border-t border-zinc-400", className)}>
         <div className='relative mt-4 flex items-center justify-end overflow-hiiden rounded-lg border-none outline-none'>
         <TextField 
             inputRef={textareaRef}

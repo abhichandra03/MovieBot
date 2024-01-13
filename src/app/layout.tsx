@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Chat from '@/Components/Chat'
 import Providers from '@/Components/Providers'
+import Image from 'next/image'
+import bg from "./assests/bg.png"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +23,9 @@ export default function RootLayout({
       <Providers>
 
       <body className={inter.className}>
+        <div className='max-h-screen min-w-full -z-10'>
+        <Image src={bg} layout='fill' quality={100} alt='Background Image' className='opacity-50 object-fit'/>
+        </div>
         <Chat/>
         {children}</body>
       </Providers>

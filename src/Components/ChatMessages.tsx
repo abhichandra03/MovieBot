@@ -12,7 +12,7 @@ const ChatMessages: FC<ChatMessagesProps> = ({className, ...props}) => {
     const inverseMessages = [...messages].reverse()
 
   return <div {...props} className={cn(
-    'flex flex-col-reverse gap-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch', className
+    'flex flex-col-reverse border-t border-zinc-400 gap-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch', className
     )}>
         <div className='flex-1 flex-grow'/>
         {inverseMessages.map((message) => (
