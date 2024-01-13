@@ -37,7 +37,7 @@ const Chat: FC = ({}) => {
           overflow: 'hidden'
         }}>
           <div className='flex flex-col h-80 '>
-            <ChatMessages className='px-1 py-2 flex-1'/>
+            <ChatMessages className='px-1 py-4 flex-1'/>
             <ChatInput className='px-3'/>
           </div>
         </AccordionDetails>

@@ -81,8 +81,27 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
     })
   return (
     <div {...props} className={cn("border-t border-zinc-400", className)}>
-        <div className='relative mt-4 flex items-center justify-end overflow-hiiden rounded-lg border-none outline-none'>
+        <div className='relative mt-4 flex items-start bg-blue-200 justify-end overflow-hidden rounded-lg border-none outline-none'>
         <TextField 
+            sx={{
+                paddingLeft: '0.5rem',
+                paddingRight: '0.5rem',
+                resize: 'none',
+                display: 'block',
+                minWidth: '100%',
+                border: 'none',
+                color: '#111827',
+                backgroundColor: '#f4f4f5',
+                paddingY: '0.375rem',
+                fontSize: '0.875rem',
+                lineHeight: '1.25rem',
+                focus: {
+                    boxShadow: 'var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color)',
+                },
+                disabled:{
+                    opacity: '50'
+                }
+            }}
             inputRef={textareaRef}
             id="multiline-flexible" 
             variant="standard" 
@@ -107,9 +126,9 @@ const ChatInput: FC<ChatInputProps> = ({className, ...props}) => {
             }}
             InputProps={{disableUnderline: true,}}
             placeholder='Write a message...'
-            className='peer disabled:opacity-50 pr-14 pl-2 resize-none block w-full border-none bg-zinc-100 py-1.5 text-gray-900 focus:ring-0 text-sm sm:leading-6'/>
+            className='peer'/>
 
-            <div className='absolute inset-y-0 flex py-1.5 pr-1.5'>
+            <div className='absolute inset-y-0  flex py-1.5 pr-1.5'>
                 <kbd className='inline-flex items-center rounded  bg-inherit px-1 font-sans text-xs text-gray-400'>
                     {isPending? <CircularProgress size={20}/> : <SendIcon/>}
                 </kbd>
